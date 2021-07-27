@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', monospace;
+	color: #ffffff;
+	background-color: #394251;
+}
+
+body {
+	width: 90%;
+	margin: auto;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+nav p {
+	font-size: 24px;
+	font-weight: 700;
+	padding-top: 20px;
+}
+
+.container {
+	margin-top: 40px;
+}
+
+.col-left {
+	margin-bottom: 40px;
+}
+
+.col-left img {
+	min-width: 400px;
+	max-width: 100%;
+}
+
+.col-right h1 {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+
+.col-right p {
+	font-size: 24px;
+	font-weight: 400px;
+	margin-bottom: 60px;
+	line-height: 1.4em;
+	padding-right: 20px;
+}
+
+button {
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #000000;
+	border: none;
+	background: #f75348;
+	padding: 20px 40px;
+	position: relative;
+	transition: 0.1s ease-in-out;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.btn-animation::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fcc841;
+	z-index: -1;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: transform 0.5s ease-in-out;
+}
+
+.btn-animation:hover::before,
+.btn-animation:focus::before {
+	transform: scaleX(1);
+}
+
+footer {
+	color: #bdbdbd;
+	padding: 20px 0;
+	text-align: center;
+}
+
+@media (min-width: 960px) {
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.col-left {
+		flex-basis: 40%;
+		margin-right: 50px;
+	}
+
+	.col-right {
+		flex-basis: 60%;
+	}
+
+	.col-right h1 {
+		font-size: 64px;
+	}
+
+	.col-right p {
+		font-size: 24px;
+	}
+}
+
+.animate__animated .animate__bounce {
+	display: inline-block;
+	margin: 0 0.5rem;
+}
